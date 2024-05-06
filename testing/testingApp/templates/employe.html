@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Information</title>
+<!-- Include Tailwind CSS via CDN -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+<div class="container mx-auto py-8">
+    <h2 class="text-2xl mb-4">Employee Information Form</h2>
+    <form id="employeeForm" method="post" action="">
+        {% csrf_token %}
+        <div class="mb-4">
+            <label for="employeeId" class="block text-gray-700">Employee ID:</label>
+            <input type="text" id="employeeId" name="employee_id" class="form-input mt-1 block w-full">
+        </div>
+        
+        <div class="mb-4">
+            <label for="employeeName" class="block text-gray-700">Employee Name:</label>
+            <input type="text" id="employeeName" name="employee_name" class="form-input mt-1 block w-full">
+        </div>
+        
+        <div class="mb-4">
+            <label for="departmentId" class="block text-gray-700">Department ID:</label>
+            <input type="text" id="departmentId" name="department_id" class="form-input mt-1 block w-full">
+        </div>
+        
+        <div class="mb-4">
+            <label for="salary" class="block text-gray-700">Salary:</label>
+            <input type="text" id="salary" name="salary" class="form-input mt-1 block w-full">
+        </div>
+        
+        <div class="mb-4">
+            <label for="departmentName" class="block text-gray-700">Department Name:</label>
+            <input type="text" id="departmentName" name="department_name" class="form-input mt-1 block w-full">
+        </div>
+        
+        <div class="mb-4">
+            <label for="departmentLocation" class="block text-gray-700">Department Location:</label>
+            <input type="text" id="departmentLocation" name="department_location" class="form-input mt-1 block w-full">
+        </div>
+        
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+    </form>
+</div>
+</body>
+</html>
